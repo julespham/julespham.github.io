@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Maxymiser</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/sky.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<!--Slide 1 Maxymiser -->
+				<section>
+					<section>
+							<h2>M&M</h2>
+							<p>	No, not the candy.</p>
+					</section>
+					<section>
+							<h2>Maxymiser</h2>
+					</section>
+				</section>
+				<!--Slide 2 Introduction-->
+				<section>
+					<section>
+						<h2>What is Maxymiser?</h2>
+					</section>
+					<section>
+						<p>
+							Website utilized for A/B testing (split testing).
+							Note: "A/B testing is when you split your audience to tests
+							a number of variations of a campaign and determines which
+							performs better."
+						</p>
+					</section>
+					<section>
+						<a href="#">
+							<img width="578" height="638" data-src="https://marketoonist.com/wp-content/uploads/2014/06/140602B.abtesting1.jpg">
+						</a>
+				</section>
+			</section>
+				<!--Slide 2 Introduction-->
+				<section>
+					<section>
+						<h3>Okay...</h3>
+						<p>how is this beneficial to us (The Hartford)?<p>
+					</section>
+					<section>
+						<ol>
+							<li class="fragment">Scripts are written in JavaScript</li>
+							<li class="fragment">Could attach action events such as
+																	button clicks, and page views</li>
+							<li class="fragment">Create mulitple variants so you could have
+																	different changes on the same page</li>
+							<li class="fragment">Great for analyzing data to determine
+							 										which UI works best for customers</li>
+						</ol>
+					</section>
+					<section>
+						There's only one caveat
+					</section>
+					<section>
+						Variants are written in JQuery.
+					</section>
+					<section>
+						<a href="#">
+							<img width="578" height="638" data-src="https://i.redd.it/7285bvqz43s01.png">
+						</a>
+					</section>
+				</section>
+				<!--Slide 3 How to use it-->
+				<section>
+				<section>
+					<h3>Example Code</h3>
+					<pre><code>
+when(function(){
+// USE WHEN TO WAIT FOR ELEMENTS ON
+// PAGE THAT YOU'LL BE MANIPULATING
+  return window.jQuery &&
+	document.getElementById('iframe') &&
+	...
+	document.getElementById('iframe')
+	        .contentDocument
+	        .querySelector('...') &&
+	..
+	})
+.done(function(){
+	var importCSSLink = addLinkElement('link')
+	document.getElementById('iframe')
+	        .contentDocument
+	        .head
+	        .appendChild(importCSSLink);
+ 	var header = document.getElementById('iframe').contentDocument.querySelectorAll('...');
+	...
+  for (var i = 0; i < header.length; i++) {
+	   if (...) {
+      header[i].lastElementChild.querySelector('...').style.display = 'none';
+			 //append icon
+	     ...
+		}}
+	var elem = document.getElementById('iframe').contentDocument.querySelectorAll(..)[0];
+	elem.parentNode.removeChild(elem);
+});
+					</code></pre>
+				</section>
+				<section>
+					<h3>Retrieving the iframe</h3>
+					<pre><code>
+when(function(){
+// USE WHEN TO WAIT FOR ELEMENTS ON
+// PAGE THAT YOU'LL BE MANIPULATING
+   return window.jQuery &&
+          document.getElementById('iframe') &&
+          ...
+          document.getElementById('iframe')
+                  .contentDocument.querySelector('...') &&
+          ...
+})
+					</code></pre>
+				</section>
+				<section>
+					<h3>Appending a new child to the iframe</h3>
+<pre><code>
+.done(function(){
+   var importCSSLink = addLinkElement('link')
+   document.getElementById('iframe')
+           .contentDocument.head.appendChild(importCSSLink);
+   var header = document.getElementById('iframe')
+                        .contentDocument.querySelectorAll('...');
+	 ...
+   for (...) {
+     if (...) {
+       header[i].lastElementChild
+                .querySelector('...').style.display = 'none';
+       //append icon
+			 ...
+     }}
+    var elem = document.getElementById('iframe')
+                       .contentDocument.querySelectorAll(..)[0];
+    elem.parentNode.removeChild(elem);
+});
+		</code></pre>
+	</section>
+				<section>
+					<a href="#">
+						<img width="400" height="400" data-src="https://i.gifer.com/Xng.gif">
+					</a>
+				</section>
+			</section>
+			<!--Slide 4 Demo-->
+			<section>
+				<section>
+					<h4>Live Demo!</h4>
+				</section>
+				<section>
+					<h4>Questions/Comments</h4>
+				</section>
+			</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
