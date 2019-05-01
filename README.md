@@ -1,4 +1,4 @@
-### Maxymiser
-## A brief introduction to Maxymiser 
+## Maxymiser
+### A brief introduction to Maxymiser 
 
 
